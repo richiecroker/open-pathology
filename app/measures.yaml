@@ -4,7 +4,10 @@
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 prescribed methotrexate who had LFTs within the prior 3 months. The numerator includes patients aged ≥ 18 who were prescribed methotrexate and had LFTs within the prior 3 months, while the denominator includes patients aged ≥ 18 prescribed methotrexate.
+    Patients were considered to be prescribed methotrexate if they had received at least 1 prescription in each of 2 consecutive 3-month periods (covering the past 6 months) - this helps ensure the measure focuses on patients with some stability in their methotrexate treatment, since monitoring recommendations differ for patients recently initiated on methotrexate.
+    A 3-month look-back period for LFTs was chosen as it enables the measure to reflect guidance adherence, since it aligns with national guidance on LFT monitoring for patients on methotrexate.
+    We excluded patients aged under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     In a small number of places, an ALT test may NOT be included within a liver function test.
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -21,7 +24,10 @@
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 prescribed methotrexate with LFTs within the stated month who had an out-of-range result. The numerator includes patients aged ≥ 18 years prescribed methotrexate with LFTs within the stated month, who had an out-of-range result. The denominator includes patients aged ≥ 18 years prescribed methotrexate with LFTs within the stated month.
+    Patients were considered to be prescribed methotrexate if they had received at least 1 prescription in each of 2 consecutive 3-month periods (covering the past 6 months) - this helps ensure the measure focuses on patients with some stability in their methotrexate treatment, since monitoring recommendations differ for patients recently initiated on methotrexate.
+    The 1-month look-back period helps identify more instances where the latest result is out-of-range, since if a longer look-back period was used then it is likely that many out-of-range results would have been superseded by a follow-up test showing an in-range result.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     In a small number of places, an ALT test may NOT be included within a liver function test.
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -38,7 +44,9 @@
     It is often used to monitor patients on medications which may affect the liver or which rely on the liver to break them down within the body.
     They are also tested for patients with known or suspected liver dysfunction.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18, who had LFTs within the stated month. The numerator includes patients aged ≥ 18 years, who had LFTs within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     **In a small number of places, an ALT test may NOT be included within a liver function test.**
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -58,7 +66,9 @@
     This helps ensure appropriate treatment,
     with the aim of reducing long term risks of complications such as stroke or myocardial infarction.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had a cholesterol test within the stated month. The numerator includes patients aged ≥ 18 years, who had a cholesterol test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included,
@@ -76,7 +86,9 @@
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 with type 2 diabetes who had an HbA1c test within the prior 6 months. The numerator includes patients aged ≥ 18 years with type 2 diabetes, who had an HbA1c test within the prior 6 months. The denominator includes patients aged ≥ 18 years with type 2 diabetes.
+    The 6-month look-back period enables the measure to reflect guidance adherence, since it aligns with the minimum HbA1c monitoring frequency recommended in NICE guidance for patients with diabetes.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -92,7 +104,9 @@
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the mean HbA1c result in patients aged ≥ 18 with type 2 diabetes within the stated month.
+    We reported the mean HbA1c value since this gives a meaningful indication of overall glycaemic control within the type-2 diabetic population.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology results, which we expect would show different patterns.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -108,7 +122,9 @@
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had an HbA1c test within the stated month. The numerator includes patients aged ≥ 18 years, who had an HbA1c test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only test results returned to GPs are included,
@@ -125,7 +141,9 @@
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of men aged ≥ 18 who had a PSA test within the stated month. The numerator includes men aged ≥ 18 years, who had a PSA test within the stated month. The denominator includes men aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -141,7 +159,9 @@
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of men aged ≥ 18 with a PSA test within the stated month who had an out-of-range result. The numerator includes men aged ≥ 18 years with a PSA test within the stated month, who had an out-of-range result. The denominator includes men aged ≥ 18 years with a PSA test within the stated month.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in the proportion out-of-range between months
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -156,7 +176,9 @@
     RBC is completed as part of a group of tests referred to as a full blood count (FBC),
     used to detect a variety of disorders of the blood, such as anaemia and infection.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had an RBC test within the stated month. The numerator includes patients aged ≥ 18 years, who had an RBC test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included,
@@ -174,7 +196,9 @@
     used to detect a variety of disorders of the kidneys.
     A renal profile is also often used to monitor patients on medications which may affect the kidneys or which rely on the kidneys to remove them from the body.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had a sodium test within the stated month. The numerator includes patients aged ≥ 18 years, who had a sodium test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included,
@@ -192,7 +216,9 @@
     This helps ensure appropriate treatment, with the aim of reducing long term risks of complications from hypertension such as stroke,
     myocardial infarction and kidney disease.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had a BP test within the stated month. The numerator includes patients aged ≥ 18 years, who had a BP test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only test results returned to GPs are included,
@@ -210,7 +236,9 @@
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 who had a vitamin D test within the stated month. The numerator includes patients aged ≥ 18 years, who had a vitamin D test within the stated month. The denominator includes patients aged ≥ 18 years.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -226,7 +254,9 @@
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged ≥ 18 with a vitamin D test within the stated month who had a result lower than the reference range. The numerator includes patients aged ≥ 18 years with a vitamin D test within the stated month, who had a result lower than the reference range. The denominator includes patients aged ≥ 18 years with a vitamin D test within the stated month.
+    The 1-month look-back period helps create a responsive measure that can clearly capture seasonal variation or any other factors that provoke changes in the proportion out-of-range between months.
+    We excluded patients under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
