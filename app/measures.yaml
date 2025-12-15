@@ -4,17 +4,19 @@
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
   design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months.</p> 
-    <p>**The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months.</p>
-    <p>**The denominator** includes patients aged 18 and over prescribed methotrexate.</p>
-    <p>**Notes**</p>
-    <p><ul>
+    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months.\n 
+    **The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months.\n
+    **The denominator** includes patients aged 18 and over prescribed methotrexate.\n
+    **Notes**zn
+    <ul>
     <li>Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.</li>
     <li>A 3-month look-back period for LFTs was chosen as it enables the measure to reflect guidance adherence, since it aligns with national guidance on LFT monitoring for patients on methotrexate.</li>
     <liWe excluded patients aged under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.</li>
-    </ul></p>
+    </ul>
+  caveats: >
+    In a small number of places, an ALT test may NOT be included within a liver function test.
+    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clini
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests-numerical-value/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDH9SY57GHN0N7W4615/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDE8QPWR3DSNSNHAFA8/
