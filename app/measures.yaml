@@ -1,19 +1,25 @@
-- name: "Methotrexate: LFT safety monitoring completion rate"
+- name: "Methotrexate - LFT safety monitoring completion rate"
   explanation: >
     An ALT blood test is one of a group of liver function tests (LFTs) which are used to detect problems with the function of the liver.
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    In a small number of places, an ALT test may NOT be included within a liver function test.
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the percentage of patients aged 18 years and over prescribed methotrexate who had LFTs within the prior 3 months.  
+    **The numerator** includes patients aged 18 years and over who were prescribed methotrexate and had LFTs within the prior 3 months.  
+    **The denominator** includes patients aged 18 years and over prescribed methotrexate.  
+    **Notes**  
+    - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
+    - We have used a 3-month look-back period for LFTs as this aligns with national guidance on [LFT monitoring for patients on methotrexate](https://academic.oup.com/rheumatology/advance-article/doi/10.1093/rheumatology/keaf522/8322743).
+    - We only include patients aged 18 years and over, and paediatric patients often have different monitoring schedules.
+  caveats: |
+    - In a small number of places, an ALT test may NOT be included within a liver function test.
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests-numerical-value/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDH9SY57GHN0N7W4615/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDE8QPWR3DSNSNHAFA8/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDNCX8ZGVAH8GH3RFNS/
-  chart_units: Percentage of patients aged ≥ 18 prescribed methotrexate (denominator) who had LFTs within the prior 3 months (numerator)
+  chart_units: Percentage of patients aged 18 years and over prescribed methotrexate (denominator) who had LFTs within the prior 3 months (numerator)
 
 - name: "Methotrexate: LFT safety monitoring results"
   explanation: >
@@ -21,40 +27,44 @@
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
   design: |
-    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months.  
-    **The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months.  
-    **The denominator** includes patients aged 18 and over prescribed methotrexate.  
-    **Notes**  
+    This measure shows the percentage of patients aged 18 years and over prescribed methotrexate, who have had LFTs within the stated month, which had an ALT marked as "out-of-range".  
+    **The numerator** includes patients aged aged 18 and over years prescribed methotrexate, and had LFTs within the stated month, who had an out-of-range result.  
+    **The denominator** includes patients aged 18 years and over prescribed methotrexate, and had LFTs within the stated month.  
+    **Notes**
     - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
-    - A 3-month look-back period for LFTs was chosen as it enables the measure to reflect guidance adherence, since it aligns with national guidance on LFT monitoring for patients on methotrexate.
-    - We excluded patients aged under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
-  caveats: >
-    In a small number of places, an ALT test may NOT be included within a liver function test.
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+    - The 1-month look-back period helps identify more instances where the latest result is out-of-range, since if a longer look-back period was used then it is likely that many out-of-range results would have been superseded by a follow-up test showing an in-range result.
+    - We only include patients aged 18 years and over, and paediatric patients often have different monitoring schedules.
+  caveats: |
+    - In a small number of places, an ALT test may NOT be included within a liver function test.
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3B2W78XTHDPH4MEGRN3/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3AX1CSDNRQMGBNDJ2P0/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3B53AY6DWXSTR5SKR5K/
-  chart_units: Percentage of patients aged ≥ 18 prescribed methotrexate with LFTs within the stated month (denominator) who had an out-of-range result (numerator)
+  chart_units: Percentage of patients aged 18 years and over prescribed methotrexate with LFTs within the stated month (denominator) who had an out-of-range result (numerator)
 
 - name: Liver Function - Alanine Transferaminase (ALT) testing rate
   explanation: >
     An ALT blood test is one of a group of liver function tests (LFTs) which are used to detect problems with the function of the liver.
     It is often used to monitor patients on medications which may affect the liver or which rely on the liver to break them down within the body.
     They are also tested for patients with known or suspected liver dysfunction.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    **In a small number of places, an ALT test may NOT be included within a liver function test.**
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the percentage of patients aged 18 years and over, who had LFTs within the stated month.  
+    **The numerator** includes patients aged 18 years and over, who had LFTs within the stated month.  
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+    **Notes**
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+  caveats: |
+    - In a small number of places, an ALT test may NOT be included within a liver function test.
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+     -Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests/2298df3e/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ51SJ986YQ2AAQFT6X6/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4YBA56Y0BYKNMWTKZJ/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ5443KC2JKYR07TPTM2/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had LFTs within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had LFTs within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR0F5MEE08VSJTYJ5HQ/
 
 - name: Cholesterol testing rate
@@ -63,17 +73,21 @@
     and also to identify patients with lipid disorders (e.g. familial hypercholesterolaemia).
     This helps ensure appropriate treatment,
     with the aim of reducing long term risks of complications such as stroke or myocardial infarction.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the percentage of patients aged 18 years and over who had a cholesterol test within the stated month.  
+    **The numerator** includes patients aged 18 years and over, who had a cholesterol test within the stated month.
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+    **Notes**
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/cholesterol-tests/0f1b2a4c/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4SEGEGM8V74A6KTM4C/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4PAD684P485V9DP2CG/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4WHDY4GHZ18A57SZ8Z/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had a cholesterol test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had a cholesterol test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR4NEBE6JBC0R0QD4HP/
 
 - name: HbA1c testing rate in patients with Type 2 diabetes
@@ -81,49 +95,61 @@
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the percentage of patients aged 18 years and over with type 2 diabetes who had an HbA1c test within the prior 6 months.  
+    **The numerator** includes patients patients aged 18 years and over with type 2 diabetes, who had an HbA1c test within the prior 6 months.  
+    **The denominator** includes patients aged 18 years and over years with type 2 diabetes.  
+    **Notes**
+    - The 6-month look-back period enables the measure to reflect guidance adherence, since it aligns with the minimum [HbA1c monitoring frequency recommended in NICE guidance for patients with diabetes](https://www.nice.org.uk/guidance/ng28/chapter/recommendations#blood-glucose-management).
+    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/glycated-haemoglobin-hba1c-tests/2ab11f20/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTE4D39TCGGM3EK9F2MJ/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTE1P5M79576947X9CT3/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTE89W3MDV7JSZ80EJKS/
-  chart_units: Percentage of patients aged ≥ 18 with type 2 diabetes (denominator) who had an HbA1c test within the prior 6 months (numerator)
+  chart_units: Percentage of patients aged 18 years and over with type 2 diabetes (denominator) who had an HbA1c test within the prior 6 months (numerator)
 
 - name: HbA1c results in patients with Type 2 diabetes
   explanation: >
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month.  
+    **Notes**
+    - We report the mean HbA1c value as a meaningful indication of overall glycaemic control within the type-2 diabetic population.
+    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/glycated-haemoglobin-hba1c-tests-numerical-value/5134e926/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDV3ZVEMJNN1FC3XE4X/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDRC0HM6D5MQY9FDXBX/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDY9JGQVEQAJEHY90S3/
-  chart_units: Mean HbA1c result in patients aged ≥ 18 with type 2 diabetes within the stated month
+  chart_units: Mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month
 
 - name: Glycated Haemoglobin A1c (HbA1c) testing rate
   explanation: >
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only test results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  design: |
+    This measure shows the percentage of patients aged 18 years and over who had an HbA1c test within the stated month.  
+    **The numerator** includes patients aged 18 years and over years who had an HbA1c test within the stated month.  
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/glycated-haemoglobin-hba1c-tests/3e5b1269/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4HGSVJKA02AVNCK23E/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4ERN2V46N3YEZE0VJ6/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4M9XAWJ7FZS31C2D09/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had an HbA1c test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had an HbA1c test within the stated month (numerator)
 
 - name: Prostate-specific antigen testing rate
   explanation: >
@@ -171,7 +197,7 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ491D3PD7GFKM5YX4F9/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ46AWH82Q4SJMDEX1P0/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4CG01ZJA0D3QGMRH56/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had an RBC test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had an RBC test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR9FH25TRPJJGAFJ10S/
 
 - name: Renal Function - Sodium testing rate
@@ -189,7 +215,7 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ40W3HBSKGS0BWJY721/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3XKCD9HVNS5ZAV5GG0/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ43N5BN3VHKFS2ER1Y4/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had a sodium test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had a sodium test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZRBZAF6ERZGAJDD0K8H/
 
 - name: Blood Pressure monitoring rate
@@ -207,7 +233,7 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3QCRBWBX6QEG9G18QE/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3KGBDGXZKRS3VY6FPF/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3TG5ES5HRAYBX32PF5/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had a BP test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had a BP test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZRET49B1F3DEF3441XN/
 
 - name: Vitamin D testing rate
@@ -224,7 +250,7 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BBFZ3HMRYJFEDRR0AM/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3B87QQJGHTE7WTMHYV5/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BD1P019M9C7NFRJAYN/
-  chart_units: Percentage of patients aged ≥ 18 (denominator) who had a vitamin D test within the stated month (numerator)
+  chart_units: Percentage of patients aged 18 years and over (denominator) who had a vitamin D test within the stated month (numerator)
 
 - name: Vitamin D test results
   explanation: >
@@ -240,4 +266,4 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BJ01YP6YP8FG47KB7W/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BGQH6DW7P9BMZG05Z2/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BNP1NZ0W5KYVRM1C80/
-  chart_units: Percentage of patients aged ≥ 18 with a vitamin D test within the stated month (denominator) who had a result lower than reference range (numerator)
+  chart_units: Percentage of patients aged 18 years and over with a vitamin D test within the stated month (denominator) who had a result lower than reference range (numerator)
