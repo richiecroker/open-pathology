@@ -4,10 +4,10 @@
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
   design: >
-    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months."  \n" 
-    **The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months."  \n"
-    **The denominator** includes patients aged 18 and over prescribed methotrexate."  \n"
-    **Notes**
+    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months.\n 
+    **The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months.\n
+    **The denominator** includes patients aged 18 and over prescribed methotrexate.\n
+    **Notes**zn
     <ul>
     <li>Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.</li>
     <li>A 3-month look-back period for LFTs was chosen as it enables the measure to reflect guidance adherence, since it aligns with national guidance on LFT monitoring for patients on methotrexate.</li>
