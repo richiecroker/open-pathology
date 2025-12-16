@@ -20,8 +20,14 @@
     An ALT blood test is one of a group of liver function tests (LFTs) which are used to detect problems with the function of the liver.
     Patients taking methotrexate are recommended to have their LFTs checked at least every 3 months.
     Following these recommendations helps identify any signs of liver toxicity in these patients, which reduces the risk of adverse drug events.
-  design: >
-    An explanation of how and why the measure is calculated.
+  design: |
+    This measure shows the percentage of patients aged 18 and over prescribed methotrexate who had LFTs within the prior 3 months.  
+    **The numerator** includes patients aged 18 and over who were prescribed methotrexate and had LFTs within the prior 3 months.  
+    **The denominator** includes patients aged 18 and over prescribed methotrexate.  
+    **Notes**  
+    - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
+    - A 3-month look-back period for LFTs was chosen as it enables the measure to reflect guidance adherence, since it aligns with national guidance on LFT monitoring for patients on methotrexate.
+    - We excluded patients aged under 18 to avoid conflating adult and paediatric pathology testing, which can often show different patterns and follow different protocols.
   caveats: >
     In a small number of places, an ALT test may NOT be included within a liver function test.
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
