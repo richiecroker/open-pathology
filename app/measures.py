@@ -72,11 +72,6 @@ class Measure:
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
         )
-        color = (
-            altair.when(altair.datum.label == MEDIAN)
-            .then(altair.value("red"))
-            .otherwise(altair.value("steelblue"))
-        )
 
         # chart
         chart = (
@@ -88,7 +83,14 @@ class Measure:
                 detail="percentile",
                 strokeDash=stroke_dash,
                 strokeWidth=stroke_width,
-                color=color,
+                color=altair.Color( 
+                    "label",
+                    scale=altair.Scale(
+                        domain=[DECILE, MEDIAN],
+                        range=["steelblue", "red"],
+                    ),
+                    legend=altair.Legend(orient="bottom"),
+                ),
                 opacity=opacity,
             )
             .add_params(legend_selection)
