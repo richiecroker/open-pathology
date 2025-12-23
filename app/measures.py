@@ -65,13 +65,18 @@ class Measure:
         )
         stroke_width = (
             altair.when(altair.datum.type == MEDIAN)
-            .then(altair.value(1))
+            .then(altair.value(2))
             .otherwise(altair.value(0.5))
         )
         opacity = (
             altair.when(legend_selection)
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
+        )
+        color = (
+            altair.when(altair.datum.type == MEDIAN)
+            .then(altair.value("red"))
+            .otherwise(altair.value("steelblue"))
         )
 
         # chart
