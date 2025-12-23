@@ -129,7 +129,7 @@
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDV3ZVEMJNN1FC3XE4X/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDRC0HM6D5MQY9FDXBX/
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDY9JGQVEQAJEHY90S3/
-  chart_units: Mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month
+  chart_units: Mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month (mmol/mol)
 
 - name: Glycated Haemoglobin A1c (HbA1c) testing rate
   explanation: >
