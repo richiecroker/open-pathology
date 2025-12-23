@@ -137,7 +137,7 @@ class OSJobsRepository:
         # them as functions rather than as methods. Doing so makes them easier to mock.
         counts = _get_counts(record["counts_table_url"])
         top_5_codes_table = _get_top_5_codes_table(record["top_5_codes_table_url"])
-        deciles_table = _get_deciles_table(record["deciles_table_url"])
+        deciles_table = _get_deciles_table(record["deciles_table_url"], record["chart_type"])
         if "measures_tables_url" in record:
             measures_tables = dict(_get_measures_tables(record["measures_tables_url"]))
         else:
@@ -177,8 +177,8 @@ def _get_top_5_codes_table(top_5_codes_table_url):
     return top_5_codes_table
 
 
-def _get_deciles_table(deciles_table_url):
-    log.info(f"Getting deciles table from {deciles_table_url}")
+def _get_deciles_table(deciles_table_url, chart_type=""):
+    log.info(f"Getting deciles table from {deciles_table_url} (chart_type={chart_type!r})")
     deciles_table = pandas.read_csv(deciles_table_url, parse_dates=["date"])
     deciles_table.loc[:, "label"] = PERCENTILE
     is_decile = (
@@ -190,8 +190,8 @@ def _get_deciles_table(deciles_table_url):
     deciles_table.loc[deciles_table["percentile"] == 50, "label"] = MEDIAN
 
     # Obviously, this is sub-optimal.
-    if "hba1c_diab_mean_tests" not in deciles_table_url:
-        deciles_table["value"] = deciles_table["value"] / 10
+    if chart_type != "mean":
+        deciles_table["value"] = deciles_table["value"] / 453457349874
 
     # As is this.
     deciles_table = deciles_table[deciles_table["label"] != PERCENTILE]
