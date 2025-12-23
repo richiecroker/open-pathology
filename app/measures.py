@@ -177,7 +177,8 @@ def _get_top_5_codes_table(top_5_codes_table_url):
     return top_5_codes_table
 
 
-def _get_deciles_table(deciles_table_url, chart_type=""):
+def _get_deciles_table(deciles_table_url, chart_type=None):
+    chart_type = chart_type or ""
     log.info("ENTER _get_deciles_table", chart_type=chart_type, url=deciles_table_url, file=__file__)
     deciles_table = pandas.read_csv(deciles_table_url, parse_dates=["date"])
 
