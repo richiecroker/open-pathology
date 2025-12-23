@@ -78,7 +78,7 @@ class Measure:
             altair.Chart(self.deciles_table, title=self.chart_units)
             .mark_line()
             .encode(
-                altair.X("yearmonth(date):T", axis=altair.Axis(format="%b %y", title=None, labelColor="#222", labelFontSize=14, labelAngle=90),
+                altair.X("yearmonth(date):T", axis=altair.Axis(format="%b %y", title=None, labelColor="#222", labelFontSize=14, labelAngle=45),
                 ),
                 altair.Y("value", axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
                 ),
