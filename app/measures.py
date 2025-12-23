@@ -63,7 +63,7 @@ class Measure:
             legend=altair.Legend(orient="bottom"),
         )
         stroke_width = (
-            altair.when(altair.datum.type == MEDIAN)
+            altair.when(altair.datum.label == MEDIAN)
             .then(altair.value(2))
             .otherwise(altair.value(0.5))
         )
@@ -73,7 +73,7 @@ class Measure:
             .otherwise(altair.value(0.2))
         )
         color = (
-            altair.when(altair.datum.type == MEDIAN)
+            altair.when(altair.datum.label == MEDIAN)
             .then(altair.value("red"))
             .otherwise(altair.value("steelblue"))
         )
