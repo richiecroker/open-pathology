@@ -80,7 +80,8 @@ class Measure:
             .encode(
                 altair.X("date", axis=altair.Axis(format="%b %y", title=None, labelColor="#222", labelFontSize=16),
                 ),
-                altair.Y("value", title=None, labelColor="#222", labelFontSize=16),
+                altair.Y("value", axis=altair.Axis(title=None, labelColor="#222", labelFontSize=16),
+                ),
                 detail="percentile",
                 strokeDash=stroke_dash,
                 strokeWidth=stroke_width,
