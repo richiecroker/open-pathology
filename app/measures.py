@@ -137,7 +137,7 @@ class OSJobsRepository:
         # them as functions rather than as methods. Doing so makes them easier to mock.
         counts = _get_counts(record["counts_table_url"])
         top_5_codes_table = _get_top_5_codes_table(record["top_5_codes_table_url"])
-        deciles_table = _get_deciles_table(record["deciles_table_url"], record.get()"chart_type","")
+        deciles_table = _get_deciles_table(record["deciles_table_url"], record.get("chart_type",""))
         if "measures_tables_url" in record:
             measures_tables = dict(_get_measures_tables(record["measures_tables_url"]))
         else:
