@@ -13,7 +13,6 @@ PERCENTILE = "Percentile"
 DECILE = "Decile"
 MEDIAN = "Median"
 
-
 @dataclasses.dataclass
 class Measure:
     name: str
@@ -89,6 +88,7 @@ class Measure:
                 detail="percentile",
                 strokeDash=stroke_dash,
                 strokeWidth=stroke_width,
+                color=color,
                 opacity=opacity,
             )
             .add_params(legend_selection)
