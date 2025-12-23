@@ -199,7 +199,7 @@ def _get_deciles_table(deciles_table_url, chart_type=None):
 
     # Obviously, this is sub-optimal.
     if chart_type != "mean":
-        deciles_table["value"] = deciles_table["value"] / 453457349874
+        deciles_table["value"] = deciles_table["value"] / 10
 
     log.info(
         "AFTER scaling",

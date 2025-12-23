@@ -15,7 +15,6 @@
     - In a small number of places, an ALT test may NOT be included within a liver function test.
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
-  chart_type: testtest
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests-numerical-value/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDH9SY57GHN0N7W4615/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDE8QPWR3DSNSNHAFA8/
@@ -113,6 +112,7 @@
   chart_units: Percentage of patients aged 18 years and over with type 2 diabetes (denominator) who had an HbA1c test within the prior 6 months (numerator)
 
 - name: HbA1c results in patients with Type 2 diabetes
+  chart_type: mean
   explanation: >
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
