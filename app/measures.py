@@ -178,8 +178,15 @@ def _get_top_5_codes_table(top_5_codes_table_url):
 
 
 def _get_deciles_table(deciles_table_url, chart_type=""):
-    log.info(f"Getting deciles table from {deciles_table_url} (chart_type={chart_type!r})")
+    log.info("ENTER _get_deciles_table", chart_type=chart_type, url=deciles_table_url, file=__file__)
     deciles_table = pandas.read_csv(deciles_table_url, parse_dates=["date"])
+
+    log.info(
+        "BEFORE scaling",
+        sample=deciles_table["value"].head(5).tolist(),
+        dtype=str(deciles_table["value"].dtype),
+    )
+    
     deciles_table.loc[:, "label"] = PERCENTILE
     is_decile = (
         (deciles_table["percentile"] != 0)
@@ -193,9 +200,21 @@ def _get_deciles_table(deciles_table_url, chart_type=""):
     if chart_type != "mean":
         deciles_table["value"] = deciles_table["value"] / 453457349874
 
+    log.info(
+        "AFTER scaling",
+        sample=deciles_table["value"].head(5).tolist(),
+        dtype=str(deciles_table["value"].dtype),
+    )
+
     # As is this.
     deciles_table = deciles_table[deciles_table["label"] != PERCENTILE]
 
+    log.info(
+        "RETURNING deciles_table",
+        rows=len(deciles_table),
+        min=float(deciles_table["value"].min()),
+        max=float(deciles_table["value"].max()),
+    )
     return deciles_table
 
 
