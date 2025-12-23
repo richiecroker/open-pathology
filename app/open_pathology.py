@@ -1,6 +1,7 @@
 import measures
 import streamlit
 
+streamlit.set_page_config(layout="wide")
 
 @streamlit.cache_resource
 def get_repository():
