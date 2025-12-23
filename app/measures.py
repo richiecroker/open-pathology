@@ -65,7 +65,7 @@ class Measure:
         stroke_width = (
             altair.when(altair.datum.label == MEDIAN)
             .then(altair.value(2))
-            .otherwise(altair.value(1))
+            .otherwise(altair.value(0.75))
         )
         opacity = (
             altair.when(legend_selection)
