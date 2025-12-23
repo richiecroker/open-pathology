@@ -65,7 +65,7 @@ class Measure:
         stroke_width = (
             altair.when(altair.datum.label == MEDIAN)
             .then(altair.value(2))
-            .otherwise(altair.value(0.5))
+            .otherwise(altair.value(1))
         )
         opacity = (
             altair.when(legend_selection)
@@ -87,7 +87,7 @@ class Measure:
                     "label",
                     scale=altair.Scale(
                         domain=[DECILE, MEDIAN],
-                        range=["steelblue", "red"],
+                        range=["blue", "red"],
                     ),
                     legend=altair.Legend(orient="bottom"),
                 ),
