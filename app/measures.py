@@ -58,7 +58,7 @@ class Measure:
             title=None,
             scale=altair.Scale(
                 domain=[DECILE, MEDIAN],
-                range=[[1, 1], [5, 5], [0, 0]],
+                range=[[2, 2], [5, 5], [0, 0]],
             ),
             legend=altair.Legend(orient="bottom"),
         )
