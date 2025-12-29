@@ -28,8 +28,16 @@ def get_demographic_table(df_measure_output):
     demograph_strata = ["by_IMD", "by_ethnicity", "by_sex", "by_region"]
     df_demograph = df_measure_output[
         df_measure_output["measure"].isin(demograph_strata)
-        & (df_measure_output["IMD"] != "unknown")
     ]
+
+   # Remove IMD == "unknown" ONLY for by_IMD rows
+    df_demograph = df_demograph[
+        ~(
+            (df_demograph["measure"] == "by_IMD") &
+            (df_demograph["IMD"].astype(str).str.lower() == "unknown")
+        )
+    ]
+    
     df_demograph = df_demograph[
         [
             "measure",
