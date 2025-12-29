@@ -245,5 +245,9 @@ def _get_measures_tables(measures_tables_url):
                     5: "Chinese or Other Ethnic Groups",
                 }
             )
+        
+        #filter out "unknown" from IMD measure
+        if measure_header == "IMD":
+            measure_table = measure_table[measure_table["IMD"] != "unknown"]
 
         yield measure_header, measure_table
