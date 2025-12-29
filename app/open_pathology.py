@@ -53,10 +53,26 @@ def main():
             "Select a demographic breakdown:", sorted(measure.measures_tables.keys())
         )
 
-        streamlit.altair_chart(measure.measure_chart(selected_demographic))
+        # ----- Tiny patch A: temporarily replace the table with a filtered copy -----
+        if selected_demographic == "by_IMD":
+            tbl = measure.measures_tables.get(selected_demographic)
+            if isinstance(tbl, pd.DataFrame):
+                filtered = tbl.loc[
+                    ~tbl["IMD"].fillna("").astype(str).str.strip().str.lower().eq("unknown")
+                ].copy()
+                # swap in filtered, draw chart, then restore original
+                orig = measure.measures_tables[selected_demographic]
+                measure.measures_tables[selected_demographic] = filtered
+                streamlit.altair_chart(measure.measure_chart(selected_demographic))
+                measure.measures_tables[selected_demographic] = orig
+            else:
+                # not a dataframe — just draw as-is
+                streamlit.altair_chart(measure.measure_chart(selected_demographic))
+        else:
+            streamlit.altair_chart(measure.measure_chart(selected_demographic))
 
-    else:
-        streamlit.markdown("No demographic breakdowns are available.")
+else:
+    streamlit.markdown("No demographic breakdowns are available.")
 
     streamlit.subheader(f"Most common codes ([codelist]({measure.codelist_url}))")
 
