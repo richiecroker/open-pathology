@@ -99,6 +99,7 @@
     This measure shows the percentage of patients aged 18 years and over with type 2 diabetes who had an HbA1c test within the prior 6 months.  
     **The numerator** includes patients patients aged 18 years and over with type 2 diabetes, who had an HbA1c test within the prior 6 months.  
     **The denominator** includes patients aged 18 years and over years with type 2 diabetes.  
+      
     **Notes**
     - The 6-month look-back period enables the measure to reflect guidance adherence, since it aligns with the minimum [HbA1c monitoring frequency recommended in NICE guidance for patients with diabetes](https://www.nice.org.uk/guidance/ng28/chapter/recommendations#blood-glucose-management).
     - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
@@ -119,6 +120,7 @@
     Poor diabetic control can place individuals living with diabetes at an increased risk of the complications of diabetes.
   design: |
     This measure shows the mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month.  
+      
     **Notes**
     - We report the mean HbA1c value as a meaningful indication of overall glycaemic control within the type-2 diabetic population.
     - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
