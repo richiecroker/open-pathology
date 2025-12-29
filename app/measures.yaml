@@ -10,7 +10,7 @@
     **Notes**  
     - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
     - We have used a 3-month look-back period for LFTs as this aligns with national guidance on [LFT monitoring for patients on methotrexate](https://academic.oup.com/rheumatology/advance-article/doi/10.1093/rheumatology/keaf522/8322743).
-    - We only include patients aged 18 years and over, and paediatric patients often have different monitoring schedules.
+    - We only include patients aged 18 years and over, as paediatric patients often have different monitoring schedules.
   caveats: |
     - In a small number of places, an ALT test may NOT be included within a liver function test.
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -33,7 +33,7 @@
     **Notes**
     - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
     - The 1-month look-back period helps identify more instances where the latest result is out-of-range, since if a longer look-back period was used then it is likely that many out-of-range results would have been superseded by a follow-up test showing an in-range result.
-    - We only include patients aged 18 years and over, and paediatric patients often have different monitoring schedules.
+    - We only include patients aged 18 years and over, as paediatric patients often have different monitoring schedules.
   caveats: |
     - In a small number of places, an ALT test may NOT be included within a liver function test.
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -55,7 +55,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
-    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - In a small number of places, an ALT test may NOT be included within a liver function test.
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -79,7 +79,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
-    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -102,7 +102,7 @@
       
     **Notes**
     - The 6-month look-back period enables the measure to reflect guidance adherence, since it aligns with the minimum [HbA1c monitoring frequency recommended in NICE guidance for patients with diabetes](https://www.nice.org.uk/guidance/ng28/chapter/recommendations#blood-glucose-management).
-    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -123,7 +123,7 @@
       
     **Notes**
     - We report the mean HbA1c value as a meaningful indication of overall glycaemic control within the type-2 diabetic population.
-    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     - Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -144,7 +144,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
     **Notes**
     - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
-    - We only include patients aged 18 years and over, and paediatric patients often have different and more specific requirements for having a test.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -160,7 +160,12 @@
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of men aged 18 years and over who had a PSA test within the stated month.  
+    **The numerator** includes men aged 18 years and over years who had a PSA test within the stated month.  
+    **The denominator** includes all registered male patients aged aged 18 years and over.  
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -176,7 +181,13 @@
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of males aged 18 years with a PSA test within the stated month, which had an PSA marked as "out-of-range".  
+    **The numerator** includes males aged aged 18 and over years with a PSA test within the stated month, who had an out-of-range result.  
+    **The denominator** includes males aged aged 18 and over years with a PSA test within the stated month.  
+      
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -191,7 +202,13 @@
     RBC is completed as part of a group of tests referred to as a full blood count (FBC),
     used to detect a variety of disorders of the blood, such as anaemia and infection.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged 18 years and over who had a RBC test within the stated month.  
+    **The numerator** includes patients aged 18 years and over, who had a a RBC test within the stated month.
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+         
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included,
@@ -209,7 +226,13 @@
     used to detect a variety of disorders of the kidneys.
     A renal profile is also often used to monitor patients on medications which may affect the kidneys or which rely on the kidneys to remove them from the body.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged 18 years and over who had a sodium test within the stated month.  
+    **The numerator** includes patients aged 18 years and over, who had a a sodium test within the stated month.
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+         
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included,
@@ -221,31 +244,19 @@
   chart_units: Percentage of patients aged 18 years and over (denominator) who had a sodium test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZRBZAF6ERZGAJDD0K8H/
 
-- name: Blood Pressure monitoring rate
-  explanation: >
-    A commonly-used assessment used to identify patients with hypertension or to ensure optimal treatment for those with known hypertension.
-    This helps ensure appropriate treatment, with the aim of reducing long term risks of complications from hypertension such as stroke,
-    myocardial infarction and kidney disease.
-  design: >
-    An explanation of how and why the measure is calculated.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only test results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
-  codelist_url: https://www.opencodelists.org/codelist/opensafely/systolic-blood-pressure-qof/3572b5fb/
-  counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3QCRBWBX6QEG9G18QE/
-  deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3KGBDGXZKRS3VY6FPF/
-  top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3TG5ES5HRAYBX32PF5/
-  chart_units: Percentage of patients aged 18 years and over (denominator) who had a BP test within the stated month (numerator)
-  measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZRET49B1F3DEF3441XN/
-
 - name: Vitamin D testing rate
   explanation: >
     Vitamin D is essential for bone health, immune function and more.
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged 18 years and over who had a vitamin D test within the stated month.  
+    **The numerator** includes patients aged 18 years and over, who had a a vitamin D test within the stated month.
+    **The denominator** includes all registered patients aged aged 18 years and over.  
+         
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
@@ -261,7 +272,13 @@
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
   design: >
-    An explanation of how and why the measure is calculated.
+    This measure shows the percentage of patients aged 18 years with a vitamin D test within the stated month, which had an result below the recorded reference range.  
+    **The numerator** includes patients aged aged 18 and over years with a vitamin D test within the stated month, which had an result below the recorded reference range
+    **The denominator** includes Patients aged aged 18 and over years with a vitamin D test within the stated month.  
+      
+    **Notes**
+    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
     Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
