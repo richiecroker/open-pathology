@@ -31,13 +31,13 @@ def get_demographic_table(df_measure_output):
     ]
 
    # Remove IMD == "unknown" ONLY for by_IMD rows
-    df_demograph = df_demograph[
+    df_demograph = df_demograph.loc[
         ~(
-            (df_demograph["measure"] == "by_IMD") &
-            (df_demograph["IMD"].astype(str).str.lower() == "unknown")
+            (df_demograph["measure"] == "by_IMD")
+            & df_demograph["IMD"].fillna("").astype(str).str.strip().str.lower().eq("unknown")
         )
     ]
-    
+
     df_demograph = df_demograph[
         [
             "measure",
