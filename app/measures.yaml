@@ -44,7 +44,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3B53AY6DWXSTR5SKR5K/
   chart_units: Percentage of patients aged 18 years and over prescribed methotrexate with LFTs within the stated month (denominator) who had an out-of-range result (numerator)
 
-- name: Liver Function: Alanine Transferaminase (ALT) testing rate
+- name: "Liver Function: Alanine Transferaminase (ALT) testing rate"
   explanation: >
     An ALT blood test is one of a group of liver function tests (LFTs) which are used to detect problems with the function of the liver.
     It is often used to monitor patients on medications which may affect the liver or which rely on the liver to break them down within the body.
@@ -67,7 +67,7 @@
   chart_units: Percentage of patients aged 18 years and over (denominator) who had LFTs within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR0F5MEE08VSJTYJ5HQ/
 
-- name: Total Cholesterol: testing rate
+- name: "Total Cholesterol: testing rate"
   explanation: >
     A commonly-used blood test used as part of a routine cardiovascular disease 10 year risk assessment
     and also to identify patients with lipid disorders (e.g. familial hypercholesterolaemia).
@@ -90,7 +90,7 @@
   chart_units: Percentage of patients aged 18 years and over (denominator) who had a cholesterol test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR4NEBE6JBC0R0QD4HP/
 
-- name: HbA1c testing rate in patients with Type 2 diabetes
+- name: "HbA1c testing rate in patients with Type 2 diabetes"
   explanation: >
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
@@ -112,7 +112,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTE89W3MDV7JSZ80EJKS/
   chart_units: Percentage of patients aged 18 years and over with type 2 diabetes (denominator) who had an HbA1c test within the prior 6 months (numerator)
 
-- name: Glycated Haemoglobin A1c (HbA1c): mean HbA1c in patients with Type 2 diabetes
+- name: "Glycated Haemoglobin A1c (HbA1c): mean HbA1c in patients with Type 2 diabetes"
   chart_type: mean
   explanation: >
     HbA1c is a long term indicator of diabetes control.
@@ -133,7 +133,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTDY9JGQVEQAJEHY90S3/
   chart_units: Mean HbA1c result in patients aged 18 years and over with type 2 diabetes within the stated month (mmol/mol)
 
-- name: Glycated Haemoglobin A1c (HbA1c): testing rate
+- name: "Glycated Haemoglobin A1c (HbA1c): testing rate"
   explanation: >
     HbA1c is a long term indicator of diabetes control.
     NICE guidelines recommend that individuals with diabetes have their HbA1c measured at least twice a year.
@@ -154,7 +154,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4M9XAWJ7FZS31C2D09/
   chart_units: Percentage of patients aged 18 years and over (denominator) who had an HbA1c test within the stated month (numerator)
 
-- name: Prostate-specific antigen (PSA): testing rate
+- name: "Prostate-specific antigen (PSA): testing rate"
   explanation: >
     Prostate-specific antigen (PSA) is a protein produced by the prostate gland which can be monitored to help detect prostate cancer.
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
@@ -175,7 +175,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTGC177KMCJAGAKG7BVH/
   chart_units: Percentage of men aged ≥ 18 (denominator) who had a PSA test within the stated month (numerator)
 
-- name: Prostate-specific antigen (PSA): out-of-range test results 
+- name: "Prostate-specific antigen (PSA): out-of-range test results" 
   explanation: >
     Prostate-specific antigen (PSA) is a protein produced by the prostate gland which can be monitored to help detect prostate cancer.
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
@@ -197,7 +197,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BVRYE7R98YQFNMYGSY/
   chart_units: Percentage of men aged ≥ 18 with a PSA test within the stated month (denominator) who had an out-of-range result (numerator)
 
-- name: Red Blood Cell (RBC) count: testing rate
+- name: "Red Blood Cell (RBC) count: testing rate"
   explanation: >
     RBC is completed as part of a group of tests referred to as a full blood count (FBC),
     used to detect a variety of disorders of the blood, such as anaemia and infection.
@@ -220,7 +220,7 @@
   chart_units: Percentage of patients aged 18 years and over (denominator) who had an RBC test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZR9FH25TRPJJGAFJ10S/
 
-- name: Renal Function: sodium testing rate
+- name: "Renal Function: sodium testing rate"
   explanation: >
     Sodium is completed as part of a group of tests referred to as a renal profile,
     used to detect a variety of disorders of the kidneys.
@@ -244,7 +244,7 @@
   chart_units: Percentage of patients aged 18 years and over (denominator) who had a sodium test within the stated month (numerator)
   measures_tables_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K18T7ZRBZAF6ERZGAJDD0K8H/
 
-- name: Vitamin D: testing rate
+- name: "Vitamin D: testing rate"
   explanation: >
     Vitamin D is essential for bone health, immune function and more.
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
@@ -266,7 +266,7 @@
   top_5_codes_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BD1P019M9C7NFRJAYN/
   chart_units: Percentage of patients aged 18 years and over (denominator) who had a vitamin D test within the stated month (numerator)
 
-- name: Vitamin D: out-of-range test results
+- name: "Vitamin D: out-of-range test results"
   explanation: >
     Vitamin D is essential for bone health, immune function and more.
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
