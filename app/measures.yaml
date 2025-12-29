@@ -8,6 +8,7 @@
     This measure shows the percentage of patients aged 18 years and over prescribed methotrexate who had LFTs within the prior 3 months.  
     **The numerator** includes patients aged 18 years and over who were prescribed methotrexate and had LFTs within the prior 3 months.  
     **The denominator** includes patients aged 18 years and over prescribed methotrexate.  
+      
     **Notes**  
     - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
     - We have used a 3-month look-back period for LFTs as this aligns with national guidance on [LFT monitoring for patients on methotrexate](https://academic.oup.com/rheumatology/advance-article/doi/10.1093/rheumatology/keaf522/8322743).
@@ -31,6 +32,7 @@
     This measure shows the percentage of patients aged 18 years and over prescribed methotrexate, who have had LFTs within the stated month, which had an ALT marked as "out-of-range".  
     **The numerator** includes patients aged aged 18 and over years prescribed methotrexate, and had LFTs within the stated month, who had an out-of-range result.  
     **The denominator** includes patients aged 18 years and over prescribed methotrexate, and had LFTs within the stated month.  
+      
     **Notes**
     - Patients were considered to be prescribed methotrexate if they had received at least **one** prescription in each of **two** consecutive 3-month periods (covering the past 6 months). By doing this, it is less likely that patients who have only recently started methotrexate (and have different monitoring requirements) are included.
     - The 1-month look-back period helps identify more instances where the latest result is out-of-range, since if a longer look-back period was used then it is likely that many out-of-range results would have been superseded by a follow-up test showing an in-range result.
@@ -55,13 +57,14 @@
     This measure shows the percentage of patients aged 18 years and over, who had LFTs within the stated month.  
     **The numerator** includes patients aged 18 years and over, who had LFTs within the stated month.  
     **The denominator** includes all registered patients aged aged 18 years and over.  
+      
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - In a small number of places, an ALT test may NOT be included within a liver function test.
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-     -Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+    -Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/alanine-aminotransferase-alt-tests/2298df3e/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ51SJ986YQ2AAQFT6X6/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ4YBA56Y0BYKNMWTKZJ/
@@ -80,6 +83,7 @@
     This measure shows the percentage of patients aged 18 years and over who had a cholesterol test within the stated month.  
     **The numerator** includes patients aged 18 years and over, who had a cholesterol test within the stated month.
     **The denominator** includes all registered patients aged aged 18 years and over.  
+      
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
@@ -147,6 +151,7 @@
     This measure shows the percentage of patients aged 18 years and over who had an HbA1c test within the stated month.  
     **The numerator** includes patients aged 18 years and over years who had an HbA1c test within the stated month.  
     **The denominator** includes all registered patients aged aged 18 years and over.  
+      
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
@@ -165,16 +170,17 @@
     Prostate-specific antigen (PSA) is a protein produced by the prostate gland which can be monitored to help detect prostate cancer.
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
-  design: >
+  design: |
     This measure shows the percentage of men aged 18 years and over who had a PSA test within the stated month.  
     **The numerator** includes men aged 18 years and over years who had a PSA test within the stated month.  
     **The denominator** includes all registered male patients aged aged 18 years and over.  
+      
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/psa-numeric-value/2258a288/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTG94PRA5MPY3GV1M3VC/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K06VQTG6WDFYJ482CH2ZAH1H/
@@ -187,7 +193,7 @@
     Prostate-specific antigen (PSA) is a protein produced by the prostate gland which can be monitored to help detect prostate cancer.
     NICE recommends offering PSA testing to men who have unexplained symptoms that could be attributable to prostate cancer.
     Following these recommendations helps ensure early detection of clinically significant prostate cancer while avoiding unnecessary harm from overdiagnosis and overtreatment.
-  design: >
+  design: |
     This measure shows the percentage of males aged 18 years with a PSA test within the stated month, which had an PSA marked as "out-of-range".  
     **The numerator** includes males aged aged 18 and over years with a PSA test within the stated month, who had an out-of-range result.  
     **The denominator** includes males aged aged 18 and over years with a PSA test within the stated month.  
@@ -195,9 +201,9 @@
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/psa-numeric-value/2258a288/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BSR2T7EHRCX27W3Q5S/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BQCH69PH9S9E6YZRAF/
@@ -209,7 +215,7 @@
   explanation: >
     RBC is completed as part of a group of tests referred to as a full blood count (FBC),
     used to detect a variety of disorders of the blood, such as anaemia and infection.
-  design: >
+  design: |
     This measure shows the percentage of patients aged 18 years and over who had a RBC test within the stated month.  
     **The numerator** includes patients aged 18 years and over, who had a a RBC test within the stated month.
     **The denominator** includes all registered patients aged aged 18 years and over.  
@@ -217,10 +223,9 @@
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/red-blood-cell-rbc-tests/576a859e/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ491D3PD7GFKM5YX4F9/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ46AWH82Q4SJMDEX1P0/
@@ -234,7 +239,7 @@
     Sodium is completed as part of a group of tests referred to as a renal profile,
     used to detect a variety of disorders of the kidneys.
     A renal profile is also often used to monitor patients on medications which may affect the kidneys or which rely on the kidneys to remove them from the body.
-  design: >
+  design: |
     This measure shows the percentage of patients aged 18 years and over who had a sodium test within the stated month.  
     **The numerator** includes patients aged 18 years and over, who had a a sodium test within the stated month.
     **The denominator** includes all registered patients aged aged 18 years and over.  
@@ -242,10 +247,9 @@
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included,
-    which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/sodium-tests-numerical-value/32bff605/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ40W3HBSKGS0BWJY721/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01JV51PQ3XKCD9HVNS5ZAV5GG0/
@@ -259,7 +263,7 @@
     Vitamin D is essential for bone health, immune function and more.
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
-  design: >
+  design: |
     This measure shows the percentage of patients aged 18 years and over who had a vitamin D test within the stated month.  
     **The numerator** includes patients aged 18 years and over, who had a a vitamin D test within the stated month.
     **The denominator** includes all registered patients aged aged 18 years and over.  
@@ -267,9 +271,9 @@
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/vitamin-d-level/1032ad60/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BBFZ3HMRYJFEDRR0AM/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3B87QQJGHTE7WTMHYV5/
@@ -282,7 +286,7 @@
     Vitamin D is essential for bone health, immune function and more.
     NICE recommends testing vitamin D levels in certain situations such as where there are symptoms suggestive of deficiency, or where suspected bone disease exists.
     Good management of vitamin D levels reduces the risk of complications from deficiency, such as osteoporosis, fractures, or impaired immune function.
-  design: >
+  design: |
     This measure shows the percentage of patients aged 18 years with a vitamin D test within the stated month, which had an result below the recorded reference range.  
     **The numerator** includes patients aged aged 18 and over years with a vitamin D test within the stated month, which had an result below the recorded reference range
     **The denominator** includes Patients aged aged 18 and over years with a vitamin D test within the stated month.  
@@ -290,9 +294,9 @@
     **Notes**
     - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
-  caveats: >
-    We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
-    Only tests results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
+  caveats: |
+    - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
+    - Only test results returned to GPs are included, which will usually exclude tests requested while a person is in hospital and other settings like a private clinic.
   codelist_url: https://www.opencodelists.org/codelist/opensafely/vitamin-d-level/1032ad60/
   counts_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BJ01YP6YP8FG47KB7W/
   deciles_table_url: https://jobs.opensafely.org/opensafely-feedback/openpathology-main/published/01K3JRW3BGQH6DW7P9BMZG05Z2/
