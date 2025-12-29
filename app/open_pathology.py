@@ -1,5 +1,6 @@
 import measures
 import streamlit
+import pandas as pd
 
 streamlit.set_page_config(layout="wide")
 
