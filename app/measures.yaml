@@ -148,7 +148,7 @@
     **The numerator** includes patients aged 18 years and over years who had an HbA1c test within the stated month.  
     **The denominator** includes all registered patients aged aged 18 years and over.  
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: |
     - We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -170,7 +170,7 @@
     **The numerator** includes men aged 18 years and over years who had a PSA test within the stated month.  
     **The denominator** includes all registered male patients aged aged 18 years and over.  
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -193,7 +193,7 @@
     **The denominator** includes males aged aged 18 and over years with a PSA test within the stated month.  
       
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -215,7 +215,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
          
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -240,7 +240,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
          
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -265,7 +265,7 @@
     **The denominator** includes all registered patients aged aged 18 years and over.  
          
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include patients aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
@@ -288,7 +288,7 @@
     **The denominator** includes Patients aged aged 18 and over years with a vitamin D test within the stated month.  
       
     **Notes**
-    - The 1-month look-back period  helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
+    - The 1-month look-back period helps capture seasonal variation or any other factors that provoke changes in testing rate between months.
     - We only include males aged 18 years and over, as paediatric patients often have different and more specific requirements for having a test.
   caveats: >
     We use codes which represent results reported to GPs so tests requested but not yet reported are not included.
