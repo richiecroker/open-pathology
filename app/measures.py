@@ -51,7 +51,6 @@ class Measure:
     def deciles_chart(self):
         # selections
         legend_selection = altair.selection_point(bind="legend", fields=["label"])
-
         # encodings
         stroke_dash = altair.StrokeDash(
             "label",
@@ -72,9 +71,8 @@ class Measure:
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
         )
-
         # chart
-        chart = (
+        line_chart = (
             altair.Chart(self.deciles_table, title=self.chart_units)
             .mark_line()
             .encode(
@@ -89,7 +87,7 @@ class Measure:
                     "label",
                     scale=altair.Scale(
                         domain=[DECILE, MEDIAN],
-                        range=["blue", "red"],
+                        range=["#DE8F05", "#0173B2"],
                     ),
                     legend=altair.Legend(orient="bottom"),
                 ),
@@ -97,6 +95,24 @@ class Measure:
             )
             .add_params(legend_selection)
         )
+        
+        # Get the rightmost points for deciles
+        rightmost_deciles = (
+            self.deciles_table[self.deciles_table['label'] == DECILE]
+            .loc[self.deciles_table.groupby('percentile')['date'].idxmax()]
+        )
+        
+        text_labels = (
+            altair.Chart(altair.Data(values=rightmost_deciles.to_dict('records')))
+            .mark_text(align='left', dx=5, fontSize=12, color='#DE8F05')
+            .encode(
+                altair.X("yearmonth(date):T"),
+                altair.Y("value"),
+                text=altair.value("deciles")
+            )
+        )
+        
+        chart = line_chart + text_labels
         return chart
 
     def measure_chart(self, measure_name):
