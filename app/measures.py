@@ -96,10 +96,9 @@ class Measure:
             .add_params(legend_selection)
         )
         
-        # Get the rightmost points for deciles
+        # Get the rightmost points for deciles using sort and drop_duplicates
         deciles_data = self.deciles_table[self.deciles_table['label'] == DECILE].copy()
-        idx = deciles_data.groupby('percentile')['date'].idxmax()
-        rightmost_deciles = self.deciles_table.loc[idx].reset_index(drop=True)
+        rightmost_deciles = deciles_data.sort_values('date').groupby('percentile').tail(1)
         
         text_labels = (
             altair.Chart(rightmost_deciles)
