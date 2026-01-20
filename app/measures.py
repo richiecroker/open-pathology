@@ -53,6 +53,8 @@ class Measure:
 
     @property
     def deciles_chart(self, cb_safe: bool = False):
+        cb_safe = getattr(self, "cb_safe", False)
+        color_range = CB_SAFE_DECILE_MEDIAN if cb_safe else DEFAULT_DECILE_MEDIAN
         # selections
         legend_selection = altair.selection_point(bind="legend", fields=["label"])
     
@@ -82,10 +84,7 @@ class Measure:
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
         )
-    
-        # pick colors
-        color_range = ["#0072B2", "#D55E00"] if cb_safe else ["blue", "red"]
-    
+      
         # chart
         chart = (
             altair.Chart(self.deciles_table, title=self.chart_units)
