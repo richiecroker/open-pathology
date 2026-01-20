@@ -4,8 +4,6 @@ import pandas as pd
 
 streamlit.set_page_config(layout="wide")
 
-color_blind_mode = streamlit.checkbox('Colour-blind friendly palette')
-
 streamlit.markdown(
     """
     <style>
