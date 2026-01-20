@@ -25,7 +25,6 @@ class Measure:
     deciles_table: pandas.DataFrame
     chart_units: str
     measures_tables: dict[str, pandas.DataFrame]
-    color_blind_mode: bool = False  # Add this field
 
     def __repr__(self):
         return f"Measure(name='{self.name}')"
@@ -34,28 +33,25 @@ class Measure:
         # Pandas wants these to be strings
         from_year = str(from_year)
         to_year = str(to_year)
+
         dt = self.deciles_table  # convenient alias
         is_month = dt["date"].dt.month == month
         is_median = dt["label"] == MEDIAN
         # set index to date to allow convenient selection by year
         value = dt.loc[is_month & is_median].set_index("date").loc[:, "value"]
+
         # .values is a numpy array
         from_val = value[from_year].values[0]
         to_val = value[to_year].values[0]
         pct_change = (to_val - from_val) / from_val
+
         return from_val, to_val, pct_change
 
     @property
     def deciles_chart(self):
         # selections
         legend_selection = altair.selection_point(bind="legend", fields=["label"])
-        
-        # Choose color scheme based on color_blind_mode
-        if self.color_blind_mode:
-            color_range = ["#0173B2", "#DE8F05"]  # Blue and orange - highly distinguishable
-        else:
-            color_range = ["blue", "red"]
-        
+
         # encodings
         stroke_dash = altair.StrokeDash(
             "label",
@@ -76,6 +72,7 @@ class Measure:
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
         )
+
         # chart
         chart = (
             altair.Chart(self.deciles_table, title=self.chart_units)
@@ -92,7 +89,7 @@ class Measure:
                     "label",
                     scale=altair.Scale(
                         domain=[DECILE, MEDIAN],
-                        range=color_range,
+                        range=["blue", "red"],
                     ),
                     legend=altair.Legend(orient="bottom"),
                 ),
