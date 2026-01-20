@@ -15,7 +15,7 @@ streamlit.markdown(
     unsafe_allow_html=True,
 )
 
-@streamlit.cache_resource
+# Remove caching or make it simpler
 def get_repository():
     return measures.OSJobsRepository()
 
@@ -24,10 +24,10 @@ def main():
     
     streamlit.title("OpenPathology")
     
-    color_blind_mode = streamlit.checkbox('Colour-blind friendly palette')  # Move it here
+    color_blind_mode = streamlit.checkbox('Colour-blind friendly palette')
     
     selected_measure_name = streamlit.selectbox("Select a measure:", repository.list())
-    measure = repository.get(selected_measure_name, color_blind_mode=color_blind_mode)  # Pass the parameter
+    measure = repository.get(selected_measure_name, color_blind_mode=color_blind_mode)
     
     streamlit.header(measure.name)
     streamlit.markdown(
