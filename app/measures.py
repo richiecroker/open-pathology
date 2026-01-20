@@ -14,8 +14,7 @@ DECILE = "Decile"
 MEDIAN = "Median"
 
 #define accessibility pallette
-CB_SAFE_DECILE_MEDIAN = ["#0072B2", "#D55E00"]  # blue, vermillion
-DEFAULT_DECILE_MEDIAN = ["blue", "red"]
+OKABE_ITO = ["#0072B2", "#D55E00", "#009E73", "#E69F00"]
 
 @dataclasses.dataclass
 class Measure:
@@ -52,10 +51,10 @@ class Measure:
         return from_val, to_val, pct_change
 
     @property
-    def deciles_chart(self, cb_safe: bool = False):
+    def deciles_chart(self):
         # selections
         legend_selection = altair.selection_point(bind="legend", fields=["label"])
-    
+
         # encodings
         stroke_dash = altair.StrokeDash(
             "label",
@@ -66,54 +65,34 @@ class Measure:
             ),
             legend=altair.Legend(orient="bottom"),
         )
-    
-        # OPTIONAL: make the median line stand out more in cb_safe mode too
-        median_width = 2.5 if cb_safe else 2
-        other_width = 1.25 if cb_safe else 0.75
-    
         stroke_width = (
             altair.when(altair.datum.label == MEDIAN)
-            .then(altair.value(median_width))
-            .otherwise(altair.value(other_width))
+            .then(altair.value(2))
+            .otherwise(altair.value(0.75))
         )
-    
         opacity = (
             altair.when(legend_selection)
             .then(altair.value(1))
             .otherwise(altair.value(0.2))
         )
-    
-        # pick colors
-        color_range = ["#0072B2", "#D55E00"] if cb_safe else ["blue", "red"]
-    
+
         # chart
         chart = (
             altair.Chart(self.deciles_table, title=self.chart_units)
             .mark_line()
             .encode(
-                altair.X(
-                    "yearmonth(date):T",
-                    axis=altair.Axis(
-                        format="%b %y",
-                        title=None,
-                        labelColor="#222",
-                        labelFontSize=14,
-                        labelAngle=45,
-                    ),
+                altair.X("yearmonth(date):T", axis=altair.Axis(format="%b %y", title=None, labelColor="#222", labelFontSize=14, labelAngle=45),
                 ),
-                altair.Y(
-                    "value",
-                    axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
+                altair.Y("value", axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
                 ),
                 detail="percentile",
                 strokeDash=stroke_dash,
                 strokeWidth=stroke_width,
-                color=altair.Color(
+                color=altair.Color( 
                     "label",
-                    title=None,
                     scale=altair.Scale(
                         domain=[DECILE, MEDIAN],
-                        range=color_range,
+                        range=["blue", "red"],
                     ),
                     legend=altair.Legend(orient="bottom"),
                 ),
@@ -122,7 +101,6 @@ class Measure:
             .add_params(legend_selection)
         )
         return chart
-
 
     def measure_chart(self, measure_name):
         chart = (
