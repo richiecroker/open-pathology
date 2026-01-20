@@ -132,33 +132,33 @@ class OSJobsRepository:
         return self._measures[cache_key]  # <- Changed from 'name' to 'cache_key'
 
     def _construct(self, name, color_blind_mode=False):
-    """Construct the measure with the given name from information stored on the
-    local file system and on OS Jobs."""
-    log.info(f'Constructing "{name}"')
-    record = self._records[name]
-
-    # The following helpers don't need access to instance attributes, so we define
-    # them as functions rather than as methods. Doing so makes them easier to mock.
-    counts = _get_counts(record["counts_table_url"])
-    top_5_codes_table = _get_top_5_codes_table(record["top_5_codes_table_url"])
-    deciles_table = _get_deciles_table(record["deciles_table_url"], record.get("chart_type",""))
-    if "measures_tables_url" in record:
-        measures_tables = dict(_get_measures_tables(record["measures_tables_url"]))
-    else:
-        measures_tables = dict()
-
-    return Measure(
-        name,
-        record["explanation"],
-        record["design"],
-        record["caveats"],
-        record["codelist_url"],
-        counts["total_events"],
-        top_5_codes_table,
-        deciles_table,
-        record["chart_units"],
-        measures_tables,
-        color_blind_mode=False,  # defaults to False
+        """Construct the measure with the given name from information stored on the
+        local file system and on OS Jobs."""
+        log.info(f'Constructing "{name}"')
+        record = self._records[name]
+    
+        # The following helpers don't need access to instance attributes, so we define
+        # them as functions rather than as methods. Doing so makes them easier to mock.
+        counts = _get_counts(record["counts_table_url"])
+        top_5_codes_table = _get_top_5_codes_table(record["top_5_codes_table_url"])
+        deciles_table = _get_deciles_table(record["deciles_table_url"], record.get("chart_type",""))
+        if "measures_tables_url" in record:
+            measures_tables = dict(_get_measures_tables(record["measures_tables_url"]))
+        else:
+            measures_tables = dict()
+    
+        return Measure(
+            name,
+            record["explanation"],
+            record["design"],
+            record["caveats"],
+            record["codelist_url"],
+            counts["total_events"],
+            top_5_codes_table,
+            deciles_table,
+            record["chart_units"],
+            measures_tables,
+            color_blind_mode=color_blind_mode,  # Pass the parameter through
     )
 
     def list(self):
