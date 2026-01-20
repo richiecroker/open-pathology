@@ -48,7 +48,7 @@ class Measure:
         return from_val, to_val, pct_change
 
     @property
-    def deciles_chart(self):
+def deciles_chart(self):
         # selections
         legend_selection = altair.selection_point(bind="legend", fields=["label"])
         # encodings
@@ -97,13 +97,11 @@ class Measure:
         )
         
         # Get the rightmost points for deciles
-        rightmost_deciles = (
-            self.deciles_table[self.deciles_table['label'] == DECILE]
-            .loc[self.deciles_table.groupby('percentile')['date'].idxmax()]
-        )
+        deciles_data = self.deciles_table[self.deciles_table['label'] == DECILE]
+        rightmost_deciles = deciles_data.loc[deciles_data.groupby('percentile')['date'].idxmax()].reset_index(drop=True)
         
         text_labels = (
-            altair.Chart(altair.Data(values=rightmost_deciles.to_dict('records')))
+            altair.Chart(rightmost_deciles)
             .mark_text(align='left', dx=5, fontSize=12, color='#DE8F05')
             .encode(
                 altair.X("yearmonth(date):T"),
