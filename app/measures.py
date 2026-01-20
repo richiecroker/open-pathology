@@ -48,85 +48,85 @@ class Measure:
         return from_val, to_val, pct_change
 
     @property
-       def deciles_chart(self):
-            # selections
-            legend_selection = altair.selection_point(bind="legend", fields=["label"])
-            # encodings
-            stroke_dash = altair.StrokeDash(
-                "label",
-                title=None,
-                scale=altair.Scale(
-                    domain=[DECILE, MEDIAN],
-                    range=[[2, 2], [5, 5], [0, 0]],
+    def deciles_chart(self):
+        # selections
+        legend_selection = altair.selection_point(bind="legend", fields=["label"])
+        # encodings
+        stroke_dash = altair.StrokeDash(
+            "label",
+            title=None,
+            scale=altair.Scale(
+                domain=[DECILE, MEDIAN],
+                range=[[2, 2], [5, 5], [0, 0]],
+            ),
+            legend=altair.Legend(orient="bottom"),
+        )
+        stroke_width = (
+            altair.when(altair.datum.label == MEDIAN)
+            .then(altair.value(2))
+            .otherwise(altair.value(0.75))
+        )
+        opacity = (
+            altair.when(legend_selection)
+            .then(altair.value(1))
+            .otherwise(altair.value(0.2))
+        )
+        # chart
+        line_chart = (
+            altair.Chart(self.deciles_table, title=self.chart_units)
+            .mark_line()
+            .encode(
+                altair.X(
+                    "yearmonth(date):T",
+                    axis=altair.Axis(
+                        format="%b %y",
+                        title=None,
+                        labelColor="#222",
+                        labelFontSize=14,
+                        labelAngle=45,
+                    ),
                 ),
-                legend=altair.Legend(orient="bottom"),
-            )
-            stroke_width = (
-                altair.when(altair.datum.label == MEDIAN)
-                .then(altair.value(2))
-                .otherwise(altair.value(0.75))
-            )
-            opacity = (
-                altair.when(legend_selection)
-                .then(altair.value(1))
-                .otherwise(altair.value(0.2))
-            )
-            # chart
-            line_chart = (
-                altair.Chart(self.deciles_table, title=self.chart_units)
-                .mark_line()
-                .encode(
-                    altair.X(
-                        "yearmonth(date):T",
-                        axis=altair.Axis(
-                            format="%b %y",
-                            title=None,
-                            labelColor="#222",
-                            labelFontSize=14,
-                            labelAngle=45,
-                        ),
+                altair.Y(
+                    "value",
+                    axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
+                ),
+                detail="percentile",
+                strokeDash=stroke_dash,
+                strokeWidth=stroke_width,
+                color=altair.Color(
+                    "label",
+                    scale=altair.Scale(
+                        domain=[DECILE, MEDIAN],
+                        range=["#DE8F05", "#0173B2"],
                     ),
-                    altair.Y(
-                        "value",
-                        axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
-                    ),
-                    detail="percentile",
-                    strokeDash=stroke_dash,
-                    strokeWidth=stroke_width,
-                    color=altair.Color(
-                        "label",
-                        scale=altair.Scale(
-                            domain=[DECILE, MEDIAN],
-                            range=["#DE8F05", "#0173B2"],
-                        ),
-                        legend=altair.Legend(orient="bottom"),
-                    ),
-                    opacity=opacity,
-                )
-                .add_params(legend_selection)
+                    legend=altair.Legend(orient="bottom"),
+                ),
+                opacity=opacity,
             )
-        
-            # Text labels at rightmost points for median
-            text_labels = (
-                altair.Chart(self.deciles_table)
-                .mark_text(align="left", dx=5, fontSize=12, color="#0173B2")
-                .encode(
-                    altair.X("yearmonth(date):T"),
-                    altair.Y("value:Q"),
-                    text=altair.value("median"),
-                )
-                .transform_filter(altair.datum.label == MEDIAN)
-                .transform_window(
-                    rank="rank()",
-                    sort=[altair.SortField("date", order="descending")],
-                    groupby=["percentile"],
-                )
-                .transform_filter(altair.datum.rank == 1)
-            )
-        
-            chart = line_chart + text_labels
-            return chart
+            .add_params(legend_selection)
+        )
     
+        # Text labels at rightmost points for median
+        text_labels = (
+            altair.Chart(self.deciles_table)
+            .mark_text(align="left", dx=5, fontSize=12, color="#0173B2")
+            .encode(
+                altair.X("yearmonth(date):T"),
+                altair.Y("value:Q"),
+                text=altair.value("median"),
+            )
+            .transform_filter(altair.datum.label == MEDIAN)
+            .transform_window(
+                rank="rank()",
+                sort=[altair.SortField("date", order="descending")],
+                groupby=["percentile"],
+            )
+            .transform_filter(altair.datum.rank == 1)
+        )
+    
+        chart = line_chart + text_labels
+        return chart
+        
     def measure_chart(self, measure_name):
         chart = (
             altair.Chart(self.measures_tables[measure_name])
