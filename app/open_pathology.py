@@ -11,19 +11,17 @@ def main():
         value=False,
     )
 
-    streamlit.markdown(
-        """
-        <style>
-            .block-container {
-                max-width: 80%;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 
-if __name__ == "__main__":
-    main()
+streamlit.markdown(
+    """
+    <style>
+        .block-container {
+            max-width: 80%;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 @streamlit.cache_resource
 def get_repository():
