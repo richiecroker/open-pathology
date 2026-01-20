@@ -131,7 +131,7 @@ class OSJobsRepository:
             self._measures[cache_key] = self._construct(name, color_blind_mode)  # <- Add parameter
         return self._measures[cache_key]  # <- Changed from 'name' to 'cache_key'
 
-    def _construct(self, name):
+    def _construct(self, name, color_blind_mode=False):
     """Construct the measure with the given name from information stored on the
     local file system and on OS Jobs."""
     log.info(f'Constructing "{name}"')
