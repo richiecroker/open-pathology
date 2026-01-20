@@ -113,7 +113,7 @@ class Measure:
             .mark_text(align="left", dx=5, fontSize=12, color="#0173B2")
             .encode(
                 altair.X("yearmonth(date):T"),
-                altair.Y("value:Q"),
+                altair.Y("value:Q", scale=altair.Scale(zero=False)),  # ADD HERE TOO
                 text=altair.value("median"),
             )
             .transform_filter(altair.datum.label == MEDIAN)
@@ -125,7 +125,7 @@ class Measure:
             .transform_filter(altair.datum.rank == 1)
         )
     
-        chart = line_chart + text_labels
+        chart = (line_chart + text_labels).resolve_scale(y='shared')  # ENSURE SHARED SCALE
         return chart
         
     def measure_chart(self, measure_name):
