@@ -123,12 +123,13 @@ class OSJobsRepository:
         self._records = {r["name"]: r for r in yaml.load(path.read_text(), yaml.Loader)}
         self._measures = {}  # the repository
 
-    def get(self, name):
+    def get(self, name, color_blind_mode=False):  # <- Add parameter here
         """Get the measure with the given name from the repository."""
         log.info(f'Getting "{name}" from the repository')
-        if name not in self._measures:
-            self._measures[name] = self._construct(name)
-        return self._measures[name]
+        cache_key = (name, color_blind_mode)  # <- NEW LINE
+        if cache_key not in self._measures:  # <- Changed from 'name' to 'cache_key'
+            self._measures[cache_key] = self._construct(name, color_blind_mode)  # <- Add parameter
+        return self._measures[cache_key]  # <- Changed from 'name' to 'cache_key'
 
     def _construct(self, name):
         """Construct the measure with the given name from information stored on the
