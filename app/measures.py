@@ -99,26 +99,19 @@ class Measure:
         # Text labels at rightmost points for deciles
         text_labels = (
             altair.Chart(self.deciles_table)
-            .transform_filter(altair.datum.label == DECILE)
-            .transform_aggregate(
-                max_date='max(date)',
-                groupby=['percentile']
-            )
-            .transform_lookup(
-                lookup='percentile',
-                from_=altair.LookupData(
-                    self.deciles_table,
-                    'percentile',
-                    ['date', 'value']
-                )
-            )
-            .transform_filter(altair.datum.date == altair.datum.max_date)
             .mark_text(align='left', dx=5, fontSize=12, color='#DE8F05')
             .encode(
                 altair.X("yearmonth(date):T"),
-                altair.Y("value"),
+                altair.Y("value:Q"),
                 text=altair.value("deciles")
             )
+            .transform_filter(altair.datum.label == DECILE)
+            .transform_window(
+                rank='rank()',
+                sort=[altair.SortField('date', order='descending')],
+                groupby=['percentile']
+            )
+            .transform_filter(altair.datum.rank == 1)
         )
         
         chart = line_chart + text_labels
