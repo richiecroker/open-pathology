@@ -47,7 +47,8 @@ def main():
     with streamlit.expander("Caveats"):
         streamlit.markdown(measure.caveats)
 
-    streamlit.altair_chart(measure.deciles_chart, cb_safe=cb_safe, use_container_width=True)
+    chart = measure.deciles_chart(cb_safe=cb_safe)
+    streamlit.altair_chart(chart, use_container_width=True)
 
     streamlit.subheader("Demographic breakdowns")
 
