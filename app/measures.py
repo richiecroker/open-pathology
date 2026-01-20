@@ -89,6 +89,7 @@ class Measure:
                 altair.Y(
                     "value",
                     axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
+                    scale=altair.Scale(zero=False),
                 ),
                 detail="percentile",
                 strokeDash=stroke_dash,
