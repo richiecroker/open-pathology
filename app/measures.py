@@ -96,12 +96,23 @@ class Measure:
             .add_params(legend_selection)
         )
         
-        # Get the rightmost points for deciles using sort and drop_duplicates
-        deciles_data = self.deciles_table[self.deciles_table['label'] == DECILE].copy()
-        rightmost_deciles = deciles_data.sort_values('date').groupby('percentile').tail(1)
-        
+        # Text labels at rightmost points for deciles
         text_labels = (
-            altair.Chart(rightmost_deciles)
+            altair.Chart(self.deciles_table)
+            .transform_filter(altair.datum.label == DECILE)
+            .transform_aggregate(
+                max_date='max(date)',
+                groupby=['percentile']
+            )
+            .transform_lookup(
+                lookup='percentile',
+                from_=altair.LookupData(
+                    self.deciles_table,
+                    'percentile',
+                    ['date', 'value']
+                )
+            )
+            .transform_filter(altair.datum.date == altair.datum.max_date)
             .mark_text(align='left', dx=5, fontSize=12, color='#DE8F05')
             .encode(
                 altair.X("yearmonth(date):T"),
