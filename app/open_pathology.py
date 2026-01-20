@@ -4,7 +4,7 @@ import pandas as pd
 
 streamlit.set_page_config(layout="wide")
 
-cb_safe = streamlit.toggle("Color-blind friendly colors", value=False)
+measures.cb_safe = streamlit.toggle("Color-blind friendly colors", value=False)
 
 streamlit.markdown(
     """
@@ -47,8 +47,7 @@ def main():
     with streamlit.expander("Caveats"):
         streamlit.markdown(measure.caveats)
 
-    chart = measure.deciles_chart(cb_safe=cb_safe)
-    streamlit.altair_chart(chart, use_container_width=True)
+    streamlit.altair_chart(measure.deciles_chart, use_container_width=True)
 
     streamlit.subheader("Demographic breakdowns")
 
