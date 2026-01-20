@@ -76,14 +76,24 @@ class Measure:
             altair.Chart(self.deciles_table, title=self.chart_units)
             .mark_line()
             .encode(
-                altair.X("yearmonth(date):T", axis=altair.Axis(format="%b %y", title=None, labelColor="#222", labelFontSize=14, labelAngle=45),
+                altair.X(
+                    "yearmonth(date):T",
+                    axis=altair.Axis(
+                        format="%b %y",
+                        title=None,
+                        labelColor="#222",
+                        labelFontSize=14,
+                        labelAngle=45,
+                    ),
                 ),
-                altair.Y("value", axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
+                altair.Y(
+                    "value",
+                    axis=altair.Axis(title=None, labelColor="#222", labelFontSize=14),
                 ),
                 detail="percentile",
                 strokeDash=stroke_dash,
                 strokeWidth=stroke_width,
-                color=altair.Color( 
+                color=altair.Color(
                     "label",
                     scale=altair.Scale(
                         domain=[DECILE, MEDIAN],
@@ -95,28 +105,28 @@ class Measure:
             )
             .add_params(legend_selection)
         )
-        
+    
         # Text labels at rightmost points for deciles
         text_labels = (
             altair.Chart(self.deciles_table)
-            .mark_text(align='left', dx=5, fontSize=12, color='#DE8F05')
+            .mark_text(align="left", dx=5, fontSize=12, color="#DE8F05")
             .encode(
                 altair.X("yearmonth(date):T"),
                 altair.Y("value:Q"),
-                text=altair.value("deciles")
+                text=altair.value("deciles"),
             )
             .transform_filter(altair.datum.label == DECILE)
             .transform_window(
-                rank='rank()',
-                sort=[altair.SortField('date', order='descending')],
-                groupby=['percentile']
+                rank="rank()",
+                sort=[altair.SortField("date", order="descending")],
+                groupby=["percentile"],
             )
             .transform_filter(altair.datum.rank == 1)
         )
-        
+    
         chart = line_chart + text_labels
         return chart
-
+    
     def measure_chart(self, measure_name):
         chart = (
             altair.Chart(self.measures_tables[measure_name])
