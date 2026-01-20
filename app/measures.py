@@ -13,6 +13,9 @@ PERCENTILE = "Percentile"
 DECILE = "Decile"
 MEDIAN = "Median"
 
+#define accessibility pallette
+OKABE_ITO = ["#0072B2", "#D55E00", "#009E73", "#E69F00"]
+
 @dataclasses.dataclass
 class Measure:
     name: str
